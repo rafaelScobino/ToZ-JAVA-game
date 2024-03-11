@@ -10,13 +10,24 @@ public class  Contestant {
     public  Integer strength;
     public  Integer magicka;
 
+    //1 to str , 2 to skl
+    private Integer currentAtkType;
+
     public Contestant ( String name, Double life, Integer strength,
-                 Integer skill, Integer magicka) {
+                 Integer skill, Integer magicka, Integer atkType) {
         this.name = name;
         this.life = life;
         this.strength = strength;
         this.skill = skill;
         this.magicka = magicka;
+        this.currentAtkType = atkType;
+    }
+
+    public void setCurrentAtkType(Integer value){
+        this.currentAtkType = value;
+    }
+    public Integer getCurrentAtkType(){
+        return this.currentAtkType;
     }
 
     public void upStr(Integer value){

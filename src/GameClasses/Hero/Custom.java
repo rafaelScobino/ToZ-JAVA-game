@@ -10,7 +10,7 @@ public class Custom extends Hero {
      Integer cMagicka;
 
     public Custom() {
-        super( "",0.0, 0, 0, 0);
+        super( "",0.0, 0, 0, 0,0);
         setStats();
         life = cLife;
         strength = cStrength;

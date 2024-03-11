@@ -7,12 +7,12 @@ public class Enemy extends Contestant {
 
     private  Integer mgkCounter = 0;
     public Enemy() {
-        this("Placement Zanas", 50.0, 2, 8, 3, 0);
+        this("Placement Zanas", 50.0, 2, 8, 3, 0,0);
     }
 
     public Enemy(String name, Double life, Integer strength,
-                 Integer skill, Integer magicka, Integer mgkC) {
-        super(name, life, strength, skill, magicka);
+                 Integer skill, Integer magicka, Integer atkTyp, Integer mgkC) {
+        super(name, life, strength, skill, magicka, atkTyp);
         this.mgkCounter = mgkC;
     }
 
@@ -74,26 +74,42 @@ public class Enemy extends Contestant {
         return choice;
     }
 
-
-    public Integer enemyActionRoll() {
-        Integer rollValue;
+    public  Integer enemyActionSelect(){
+        //1 to str, 2 to skll
+        Integer selected;
         Integer dice = Mechanics.dice();
         switch (statusCheck()){
             case 1:
                 if (dice >= 4){
-                    rollValue = this.strRoll();
-                }else{rollValue = this.sklRoll();}
+                    selected = 1;
+                }else{selected = 2;}
                 break;
             case 2:
                 if (dice >= 4){
-                    rollValue = this.sklRoll();
-                }else{rollValue = this.strRoll();}
+                    selected = 2;
+                }else{selected = 1;}
                 break;
             default:
                 if (dice >= 6){
-                    rollValue = this.strRoll();
-                }else{rollValue = this.sklRoll();}
+                    selected = 1;
+                }else{selected = 2;}
                 break;
+        }
+        return selected;
+    }
+
+
+    public Integer enemyActionRoll() {
+        Integer rollValue;
+        Integer i = enemyActionSelect();
+        if (i == 1) {
+            rollValue = this.strRoll();
+            this.setCurrentAtkType(1);
+        } else if (i == 2) {
+            rollValue = this.sklRoll();
+            this.setCurrentAtkType(2);
+        } else {
+            throw new IllegalStateException("Unexpected value: " + enemyActionSelect());
         }
         return rollValue;
     }
@@ -105,15 +121,14 @@ public class Enemy extends Contestant {
                 System.out.println("Inimigo se curou");
                 this.mgkCure();
                 countMgk();
-                System.out.println("Enemy mgkCounter: " + this.mgkCounter);
                 rollValue =  this.enemyActionRoll();
 
                 break;
             case 2:
                 System.out.println("Inimigo usou MgkRoll");
                 countMgk();
-                System.out.println("Enemy mgkCounter: " + this.mgkCounter);
                 rollValue = this.magkRoll();
+                this.setCurrentAtkType(0);
                 break;
             default:
                 rollValue = enemyActionRoll();
@@ -127,10 +142,10 @@ public class Enemy extends Contestant {
 
     public Integer enemyRoll() {
         Integer rollValue;
+        this.setCurrentAtkType(0);
         System.out.println("Ação Inimiga");
         rollValue = this.mgkUsage();
             countMgk();
-            System.out.println("Enemy mgkCounter: " + this.mgkCounter);
         System.out.println("Ataque Inimigo total: " + rollValue);
         return rollValue;
     }

@@ -11,18 +11,19 @@ public class Hero extends Contestant {
         hName = JOptionPane.showInputDialog("Seu Nome:");
     }
 
-    public Hero(String name, Double life, Integer strength, Integer skill, Integer magicka){
-        super(name,life, strength,skill,magicka);
+    public Hero(String name, Double life, Integer strength, Integer skill, Integer magicka, Integer atkType){
+        super(name,life, strength,skill,magicka,atkType);
         setName();
         this.name = hName;
         this.life = life;
         this.strength = strength;
         this.skill = skill;
         this.magicka = magicka;
+        this.setCurrentAtkType(atkType);
 
     }
 
-    public  Integer heroSelect(){
+    public  Integer heroActionSelect(){
         // 1 to strRoll, 2 to sklRoll, 3 to MgkRoll, 4 to cure
         Integer selected;
             if (this.magicka == 0) {
@@ -41,16 +42,20 @@ public class Hero extends Contestant {
     public Integer heroRoll(){
         Integer rollValue;
         System.out.println("Sua Ação");
-        switch (heroSelect()){
+        this.setCurrentAtkType(0);
+        switch (heroActionSelect()){
             case 1:
                rollValue =  this.strRoll();
+               this.setCurrentAtkType(1);
                 break;
             case 2:
                rollValue =  this.sklRoll();
+                this.setCurrentAtkType(2);
                 break;
             case 3:
                 System.out.println("Você usou MgkRoll!");
                 rollValue = this.magkRoll();
+                this.setCurrentAtkType(0);
                 break;
             case 4:
                 System.out.println("Você se curou!");
@@ -58,16 +63,18 @@ public class Hero extends Contestant {
                     Integer turnSelc = Integer.parseInt(JOptionPane.showInputDialog("Selecione sua Ação: 1 para Str | 2 para SKl"));
                 if (turnSelc == 1 ){
                     rollValue = this.strRoll();
+                    this.setCurrentAtkType(1);
                 }else {
                     rollValue = this.sklRoll();
+                    this.setCurrentAtkType(2);
                 }
                 break;
             default:
                 rollValue = this.strRoll();
+                this.setCurrentAtkType(1);
                 break;
         }
         System.out.println("Sua Ação total: " + rollValue);
-
         return rollValue;
     }
 

@@ -26,19 +26,37 @@ public class Battle {
         return turn;
     }
     public static void clash( Hero hero, Enemy enemy) {
+        int yourRoll = hero.heroRoll();
+        int theirRoll = enemy.enemyRoll();
         switch (turnSelector()) {
             case 'e':
-                if (hero.heroRoll() > enemy.enemyRoll()) {
-                    enemy.life = enemy.life - 10.0;
-                } else {
-                    System.out.println("Você errou ou foi defendido");
+                if (hero.getCurrentAtkType() == 1 && enemy.getCurrentAtkType() ==1){
+                    if (yourRoll > theirRoll) {
+                        enemy.life = enemy.life - (yourRoll - theirRoll);
+                    } else {
+                        System.out.println("Você errou ou foi defendido");
+                    }
+                }else {
+                    if (yourRoll > theirRoll) {
+                        enemy.life = enemy.life - 10;
+                    } else {
+                        System.out.println("Você errou ou foi defendido");
+                    }
                 }
                 break;
             case 'o':
-                if (enemy.enemyRoll() > hero.heroRoll()) {
-                    hero.life = hero.life - 10.0;
-                } else {
-                    System.out.println("Você esquivou ou defendeu");
+                if (hero.getCurrentAtkType() == 1 && enemy.getCurrentAtkType() ==1){
+                    if (theirRoll > yourRoll) {
+                        hero.life = hero.life - (theirRoll - yourRoll);
+                    } else {
+                        System.out.println("Você desviou ou defendeu");
+                    }
+                }else {
+                    if (theirRoll > yourRoll) {
+                        hero.life = hero.life - 10;
+                    } else {
+                        System.out.println("Você desviou ou foi defendeu");
+                    }
                 }
                 break;
             default:
@@ -73,7 +91,7 @@ public class Battle {
             System.out.println("Turno: " + turnCounter);
             myHero.showStats();
             myEnemy.showStats();
-            clash( myHero, myEnemy);
+            clash( myHero , myEnemy );
             gameOver(myHero, myEnemy, turnCounter);
             countTurn();
             System.out.println(" ");
