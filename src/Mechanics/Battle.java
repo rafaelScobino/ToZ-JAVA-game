@@ -1,6 +1,5 @@
 package Mechanics;
 
-import GameClasses.Contestant;
 import GameClasses.Enemy.Enemy;
 import GameClasses.Hero.Hero;
 
