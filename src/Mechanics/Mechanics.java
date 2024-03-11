@@ -23,11 +23,11 @@ public class Mechanics {
         };
     }
 
-
-
     public static Enemy myEnemy(){
         return new Enemy();
     }
+
+
     public static void main(String[] args) {
 
     }

@@ -22,6 +22,54 @@ public class Hero extends Contestant {
 
     }
 
+    public  Integer heroSelect(){
+        // 1 to strRoll, 2 to sklRoll, 3 to MgkRoll, 4 to cure
+        Integer selected;
+            if (this.magicka == 0) {
+             selected  = Integer.parseInt(JOptionPane.showInputDialog("Selecione sua Ação: 1 para Str | 2 para Skl"));
+                if (selected > 2){
+                    JOptionPane.showMessageDialog(null, "Sua magicka acabou!!");
+                    selected  = Integer.parseInt(JOptionPane.showInputDialog("Selecione sua Ação: 1 para Str | 2 para Skl"));
+                }if (selected > 2){ JOptionPane.showMessageDialog(null, "Teimoso vai jogar com Str!!");
+                    selected = 1;
+                }
+            }else {
+                selected  = Integer.parseInt(JOptionPane.showInputDialog("Selecione sua Ação: 1 para Str | 2 para Skl | 3 para Mgk | 4 para cura"));
+            }
+        return selected;
+    }
+    public Integer heroRoll(){
+        Integer rollValue;
+        System.out.println("Sua Ação");
+        switch (heroSelect()){
+            case 1:
+               rollValue =  this.strRoll();
+                break;
+            case 2:
+               rollValue =  this.sklRoll();
+                break;
+            case 3:
+                System.out.println("Você usou MgkRoll!");
+                rollValue = this.magkRoll();
+                break;
+            case 4:
+                System.out.println("Você se curou!");
+                this.mgkCure();
+                    Integer turnSelc = Integer.parseInt(JOptionPane.showInputDialog("Selecione sua Ação: 1 para Str | 2 para SKl"));
+                if (turnSelc == 1 ){
+                    rollValue = this.strRoll();
+                }else {
+                    rollValue = this.sklRoll();
+                }
+                break;
+            default:
+                rollValue = this.strRoll();
+                break;
+        }
+        System.out.println("Sua Ação total: " + rollValue);
+
+        return rollValue;
+    }
 
     public static void main(String[] args) {
 //

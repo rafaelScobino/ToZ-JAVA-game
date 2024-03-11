@@ -19,6 +19,23 @@ public class  Contestant {
         this.magicka = magicka;
     }
 
+    public void upStr(Integer value){
+        this.strength = this.strength + value;
+    }
+
+    public void upSkl(Integer value){
+        this.skill = this.skill + value;
+    }
+
+    public void upLife(Integer value){
+        this.life = this.life + value;
+    }
+
+
+    public void upMgk(Integer value){
+        this.magicka = this.magicka + value;
+    }
+
     public Integer strRoll() {
         Integer dice = Mechanics.dice();
         Integer roll = this.strength + dice;
@@ -33,6 +50,22 @@ public class  Contestant {
         return roll;
     }
 
+    public void  useMagicka(){
+        this.magicka --;
+        System.out.println("Magicka Utilizada!! | Magicka - 1");
+    }
+
+    public Integer magkRoll(){
+        useMagicka();
+        return 100 + this.skill + this.strength;
+
+    }
+
+    public void  mgkCure(){
+        useMagicka();
+        this.life = this.life + 10;
+    }
+
     public void showStats() {
         System.out.println(
                 "Name: " + name + " | " +
@@ -42,9 +75,7 @@ public class  Contestant {
                         "Mgk: " + magicka);
     }
 
-    public void  useMagicka(){
-         this.magicka --;
-    }
+
 
 
 
