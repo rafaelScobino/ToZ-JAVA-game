@@ -1,7 +1,7 @@
 package GameClasses.Enemy;
 
 import GameClasses.Contestant;
-import Mechanics.Mechanics;
+import GameMechanics.Mechanics;
 
 public class Enemy extends Contestant {
 

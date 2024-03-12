@@ -1,6 +1,6 @@
 package GameClasses;
 
-import Mechanics.Mechanics;
+import GameMechanics.Mechanics;
 
 public class  Contestant {
 
