@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GameGUI.TowerBattleGUI">
+  <grid id="27dc6" binding="towerFrame" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="2" left="5" bottom="2" right="5"/>
+    <constraints>
+      <xy x="1" y="5" width="1920" height="1109"/>
+    </constraints>
+    <properties>
+      <autoscrolls value="true"/>
+      <background color="-16777216"/>
+      <font name="Castellar" size="16" style="1"/>
+      <foreground color="-28339"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="191bf" binding="menuFrame" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="Castellar" size="16" style="1"/>
+          <foreground color="-28339"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="6c98f" class="javax.swing.JButton" binding="HEROCREATEButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <background color="-15132304"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-28339"/>
+              <text value="HERO CREATE"/>
+            </properties>
+          </component>
+          <component id="70c3f" class="javax.swing.JButton" binding="RESTARTButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <background color="-15132304"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-28339"/>
+              <text value="RESTART"/>
+            </properties>
+          </component>
+          <component id="73231" class="javax.swing.JTextPane" binding="titleFrame">
+            <constraints/>
+            <properties>
+              <background color="-16777216"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <font name="Castellar" size="36" style="1"/>
+              <foreground color="-28339"/>
+              <inheritsPopupMenu value="false"/>
+              <margin top="3" left="200" bottom="3" right="3"/>
+              <minimumSize width="-1" height="-1"/>
+              <opaque value="true"/>
+              <text value="Tower Of Zanas!"/>
+            </properties>
+            <clientProperties>
+              <JEditorPane.w3cLengthUnits class="java.lang.Boolean" value="false"/>
+              <caretWidth class="java.lang.Integer" value="10"/>
+              <charset class="java.lang.String" value=""/>
+            </clientProperties>
+          </component>
+        </children>
+      </grid>
+      <grid id="c6e50" binding="contestantFrame" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="24" height="451"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="Castellar" size="16" style="1"/>
+          <foreground color="-28339"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="21bba" binding="heroFrame" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="15"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="24" height="418"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <doubleBuffered value="false"/>
+              <enabled value="true"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-28339"/>
+            </properties>
+            <border type="line">
+              <color color="-28339"/>
+            </border>
+            <children>
+              <grid id="943a0" binding="heroStats" layout-manager="GridLayoutManager" row-count="1" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16777216"/>
+                  <font name="Castellar" size="16" style="1"/>
+                  <foreground color="-28339"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="52f20" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="4d48b"/>
+                      <text value="Life:"/>
+                    </properties>
+                  </component>
+                  <component id="4d48b" class="javax.swing.JTextArea" binding="hLifeValue">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="d04a1" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="1588b"/>
+                      <text value="Strenght:"/>
+                    </properties>
+                  </component>
+                  <component id="1588b" class="javax.swing.JTextArea" binding="hStrValue">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="ad671" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="8d3d4"/>
+                      <text value="Skill:"/>
+                    </properties>
+                  </component>
+                  <component id="e7d30" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="22afd"/>
+                      <text value="Magicka"/>
+                    </properties>
+                  </component>
+                  <component id="22afd" class="javax.swing.JTextArea" binding="hMgkValue">
+                    <constraints>
+                      <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="8d3d4" class="javax.swing.JTextArea" binding="hSklValue">
+                    <constraints>
+                      <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="c1f64" binding="heroName" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-28339"/>
+                </properties>
+                <clientProperties>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+                <border type="none"/>
+                <children>
+                  <component id="75c78" class="javax.swing.JTextPane" binding="hName">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <margin top="3" left="130" bottom="3" right="3"/>
+                      <text value="hero name"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                </children>
+              </grid>
+              <vspacer id="8c49c">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="88164" class="javax.swing.JLabel" binding="heroImg">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="11" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <doubleBuffered value="true"/>
+                  <icon value="hero/ranger/rangerIdle.gif"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="4bda6" binding="enemyFrame" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="15" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="24" height="418"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-28339"/>
+            </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
+            <border type="line">
+              <color color="-28339"/>
+            </border>
+            <children>
+              <grid id="6fa72" binding="enemyStats" layout-manager="GridLayoutManager" row-count="1" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16777216"/>
+                  <font name="Castellar" size="16" style="1"/>
+                  <foreground color="-28339"/>
+                </properties>
+                <clientProperties>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+                <border type="none"/>
+                <children>
+                  <component id="f9427" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="45b91"/>
+                      <text value="Life:"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="45b91" class="javax.swing.JTextArea" binding="eLifeValue">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="1" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="3542c" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="496d7"/>
+                      <text value="Strenght:"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="496d7" class="javax.swing.JTextArea" binding="eStrValue">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="1" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="eafb7" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="a2e3e"/>
+                      <text value="Skill:"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="a2e3e" class="javax.swing.JTextArea" binding="eSklValue">
+                    <constraints>
+                      <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="1" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="9db17" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <labelFor value="d4122"/>
+                      <text value="Magicka"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="d4122" class="javax.swing.JTextArea" binding="eMgkValue">
+                    <constraints>
+                      <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="1" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <text value=""/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="6e428" binding="enemyName" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-28339"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="475c3" class="javax.swing.JTextPane" binding="eName">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <margin top="3" left="130" bottom="3" right="3"/>
+                      <text value="PLACEMENT HERO"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <vspacer id="1b772">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="10adb" class="javax.swing.JLabel" binding="enemyImg">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="13" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <doubleBuffered value="true"/>
+                  <icon value="enemy/wizard/wizardIdle.gif"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="832c0" binding="actionPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-28339"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="4fc08" class="javax.swing.JButton" binding="strButton">
+                <constraints/>
+                <properties>
+                  <background color="-15132304"/>
+                  <focusPainted value="true"/>
+                  <font name="Castellar" size="16" style="1"/>
+                  <foreground color="-28339"/>
+                  <selected value="false"/>
+                  <text value="Strength"/>
+                </properties>
+              </component>
+              <component id="829e9" class="javax.swing.JButton" binding="sklButton">
+                <constraints/>
+                <properties>
+                  <background color="-15132304"/>
+                  <font name="Castellar" size="16" style="1"/>
+                  <foreground color="-28339"/>
+                  <text value="Skill"/>
+                </properties>
+              </component>
+              <component id="4d88e" class="javax.swing.JButton" binding="mgkButton">
+                <constraints/>
+                <properties>
+                  <background color="-15132304"/>
+                  <font name="Castellar" size="16" style="1"/>
+                  <foreground color="-28339"/>
+                  <text value="Magicka"/>
+                </properties>
+              </component>
+              <component id="e8d6c" class="javax.swing.JButton" binding="cureButton">
+                <constraints/>
+                <properties>
+                  <background color="-15132304"/>
+                  <font name="Castellar" size="16" style="1"/>
+                  <foreground color="-28339"/>
+                  <text value="Heal"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="d3177" binding="inputsFrame" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="Castellar" size="16" style="1"/>
+          <foreground color="-28339"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="68a50" class="javax.swing.JLabel" binding="inputsLabel">
+            <constraints/>
+            <properties>
+              <background color="-16777216"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-28339"/>
+              <labelFor value="50b5a"/>
+              <text value="Enter Text"/>
+            </properties>
+          </component>
+          <component id="50b5a" class="javax.swing.JTextField" binding="inputs">
+            <constraints/>
+            <properties>
+              <background color="-16777216"/>
+              <columns value="15"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-16711681"/>
+              <horizontalAlignment value="0"/>
+              <text value=""/>
+            </properties>
+            <clientProperties>
+              <caretWidth class="java.lang.Integer" value="-1"/>
+            </clientProperties>
+          </component>
+          <component id="f3e39" class="javax.swing.JButton" binding="inputButton">
+            <constraints/>
+            <properties>
+              <background color="-15132304"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-28339"/>
+              <text value="OK"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="f64ab" binding="towerStats" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="Castellar" size="16" style="1"/>
+          <foreground color="-28339"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <vspacer id="4e914">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="827d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-2104859"/>
+              <labelFor value="1d05c"/>
+              <text value="Current Turn:"/>
+            </properties>
+          </component>
+          <component id="1d05c" class="javax.swing.JTextArea" binding="turnNumber">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <editable value="false"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-16711681"/>
+              <text value="0"/>
+            </properties>
+          </component>
+          <component id="e5884" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-2104859"/>
+              <labelFor value="bfc77"/>
+              <text value="Tower Level:"/>
+            </properties>
+          </component>
+          <component id="bfc77" class="javax.swing.JTextArea" binding="towerLevel">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="2" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <editable value="false"/>
+              <font name="Castellar" size="16" style="1"/>
+              <foreground color="-16711681"/>
+              <text value="0"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="5e85d" binding="madeByPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="5dc25" class="javax.swing.JTextPane" binding="madeBy">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-28339"/>
+              <editable value="false"/>
+              <font name="Monospaced" size="16" style="1"/>
+              <foreground color="-16777216"/>
+              <text value="Made By Rafael Scobino | scorafa.com"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="67968" binding="gameConsolePane">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="true"/>
+          <background color="-16777216"/>
+          <font name="Monospaced" size="14" style="1"/>
+          <foreground color="-16711681"/>
+          <horizontalScrollBarPolicy value="30"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="e8275" class="javax.swing.JTextArea" binding="gameConsole">
+            <constraints/>
+            <properties>
+              <background color="-16777216"/>
+              <editable value="false"/>
+              <font name="Monospaced" size="14" style="0"/>
+              <foreground color="-16711681"/>
+              <lineWrap value="true"/>
+              <margin top="2" left="2" bottom="2" right="2"/>
+              <rows value="10"/>
+              <text value=""/>
+              <wrapStyleWord value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>
