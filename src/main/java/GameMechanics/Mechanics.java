@@ -17,9 +17,8 @@ public class Mechanics {
     }
 
     public static Hero myHero(){
-        JOptionPane.showMessageDialog(null,"Select your Class:");
-        String selected = HeroCreateMechanics.getInputValue();
-        HeroCreateMechanics.setInputNull();
+        String selected = TemporaryClassSelection.selectionMethod();
+        DelayGambi.delay(3000);
         return switch (selected) {
             case "warrior" -> new Warrior();
             case "wizard" -> new Wizard();

@@ -23,6 +23,7 @@ public class Tower {
     public  static void towerInit(){
         //Initializing Objects
         TowerBattleGUI.guiInit();
+        JOptionPane.showMessageDialog(TowerBattleGUI.frame,"Strength vs Strength -> Damage is the difference | Any Other clash, damage is set to 10 | When you heal, you can attack after normally | MgkRoll add + 10 on your roll");
         Hero myHero = Mechanics.myHero();
         Enemy myEnemy = Mechanics.myEnemy();
         //making sure is thread safe
@@ -41,7 +42,6 @@ public class Tower {
                 Mechanics.heroImgSetter(TowerBattleGUI.frame,"/hero/ranger/rangerRun.gif");
                 Mechanics.enemyImgSetter(TowerBattleGUI.frame,"/enemy/wizard/wizardRun.gif");
             });
-            if (Tower.getTowerRestart()!=null){break;}
         }
 
     }
@@ -49,6 +49,7 @@ public class Tower {
     public static void main(String[] args) {
         //Initializing Objects
         TowerBattleGUI.guiInit();
+        JOptionPane.showConfirmDialog(TowerBattleGUI.frame,"Strength vs Strength -> Damage is de difference | Any Other clash, damage is set to 10 | When you heal, you can attack after normally | MgkRoll add + 10 on your roll");
         Hero myHero = Mechanics.myHero();
         Enemy myEnemy = Mechanics.myEnemy();
         //making sure is thread safe

@@ -128,18 +128,21 @@ public class TowerBattleGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BattleInterfaceMechanics.sethActionSelected(2);
+
             }
         });
         mgkButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BattleInterfaceMechanics.sethActionSelected(3);
+
             }
         });
         cureButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BattleInterfaceMechanics.sethActionSelected(4);
+
             }
         });
         inputButton.addActionListener(new ActionListener() {
@@ -147,11 +150,13 @@ public class TowerBattleGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 HeroCreateMechanics.setInputValue(inputs.getText());
                 inputs.setText("");
+
             }
         });
         HEROCREATEButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
 
             }
         });
@@ -159,6 +164,7 @@ public class TowerBattleGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Tower.setTowerRestart(1);
+
             }
         });
     }

@@ -153,7 +153,7 @@ public class Battle {
                 Mechanics.enemyImgSetter(TowerBattleGUI.frame, "/enemy/wizard/wizardDie.gif");
             });
             JOptionPane.showMessageDialog(null, "Time Out");
-            Tower.setTowerRestart(1);
+            System.exit(0);
         }
         if (hero.life <= 0) {
             javax.swing.SwingUtilities.invokeLater(() -> {
@@ -161,7 +161,7 @@ public class Battle {
                 Mechanics.enemyImgSetter(TowerBattleGUI.frame, "/enemy/wizard/wizardJump.gif");
             });
             JOptionPane.showMessageDialog(null, "You Died");
-            Tower.setTowerRestart(1);
+            System.exit(0);
         }
         if (enemy.life <= 0) {
             javax.swing.SwingUtilities.invokeLater(() -> {
@@ -169,7 +169,7 @@ public class Battle {
                 Mechanics.enemyImgSetter(TowerBattleGUI.frame, "/enemy/wizard/wizardDie.gif");
             });
             JOptionPane.showMessageDialog(null, "You Won");
-            Tower.setTowerRestart(1);
+            System.exit(0);
         }
     }
 
