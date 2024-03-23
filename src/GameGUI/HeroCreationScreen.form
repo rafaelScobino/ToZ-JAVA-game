@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GameGUI.HeroCreationScreen">
+  <grid id="27dc6" binding="heroCreateScreen" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1100" height="900"/>
+    </constraints>
+    <properties>
+      <background color="-16777216"/>
+      <doubleBuffered value="false"/>
+      <maximumSize width="1100" height="900"/>
+      <minimumSize width="1100" height="900"/>
+      <preferredSize width="1100" height="900"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="bbac1" binding="titlePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-16777216"/>
+          <maximumSize width="1100" height="200"/>
+          <minimumSize width="1100" height="200"/>
+          <preferredSize width="1100" height="200"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="22417" class="javax.swing.JTextArea" binding="gameTitle">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-16777216"/>
+              <editable value="false"/>
+              <focusable value="false"/>
+              <font name="Castellar" size="20" style="1"/>
+              <foreground color="-28339"/>
+              <margin top="20" left="450" bottom="0" right="0"/>
+              <maximumSize width="1100" height="50"/>
+              <minimumSize width="1100" height="50"/>
+              <preferredSize width="1100" height="50"/>
+              <text value="Tower Of Zanas"/>
+            </properties>
+          </component>
+          <component id="e657" class="javax.swing.JTextPane" binding="hcTitle">
+            <constraints border-constraint="South"/>
+            <properties>
+              <background color="-16777216"/>
+              <editable value="false"/>
+              <focusable value="false"/>
+              <font name="Castellar" size="28" style="1"/>
+              <foreground color="-28339"/>
+              <margin top="60" left="420" bottom="3" right="3"/>
+              <maximumSize width="1100" height="150"/>
+              <minimumSize width="1100" height="150"/>
+              <name value="classSelect"/>
+              <preferredSize width="1100" height="150"/>
+              <text value="Hero Creation"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="c5700" binding="heroPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-16777216"/>
+          <maximumSize width="1100" height="500"/>
+          <minimumSize width="1100" height="500"/>
+          <preferredSize width="1100" height="500"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="a6222" binding="heroStats" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="West"/>
+            <properties>
+              <background color="-16777216"/>
+              <foreground color="-28339"/>
+              <maximumSize width="400" height="500"/>
+              <minimumSize width="400" height="500"/>
+              <preferredSize width="400" height="500"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="f3eab" binding="lifePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <focusable value="false"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <opaque value="true"/>
+                  <preferredSize width="400" height="115"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="92cc" class="javax.swing.JLabel">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="24" style="1"/>
+                      <foreground color="-28339"/>
+                      <horizontalAlignment value="4"/>
+                      <horizontalTextPosition value="0"/>
+                      <labelFor value="ccde4"/>
+                      <maximumSize width="200" height="115"/>
+                      <minimumSize width="200" height="115"/>
+                      <preferredSize width="200" height="115"/>
+                      <text value="Life:"/>
+                    </properties>
+                  </component>
+                  <component id="ccde4" class="javax.swing.JTextPane" binding="lifeTextPane" default-binding="true">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <focusable value="false"/>
+                      <font name="Castellar" size="18" style="1"/>
+                      <foreground color="-16711681"/>
+                      <margin top="48" left="15" bottom="3" right="3"/>
+                      <maximumSize width="100" height="115"/>
+                      <minimumSize width="100" height="115"/>
+                      <preferredSize width="100" height="115"/>
+                      <text value="LifeValu"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="292c7" binding="strPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <focusable value="false"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <opaque value="true"/>
+                  <preferredSize width="400" height="115"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="9cb1b" class="javax.swing.JLabel">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="24" style="1"/>
+                      <foreground color="-28339"/>
+                      <horizontalAlignment value="4"/>
+                      <horizontalTextPosition value="0"/>
+                      <labelFor value="f815a"/>
+                      <maximumSize width="200" height="115"/>
+                      <minimumSize width="200" height="115"/>
+                      <preferredSize width="200" height="115"/>
+                      <text value="Strength:"/>
+                    </properties>
+                  </component>
+                  <component id="f815a" class="javax.swing.JTextPane" binding="strValueTextPane">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <focusable value="false"/>
+                      <font name="Castellar" size="18" style="1"/>
+                      <foreground color="-16711681"/>
+                      <margin top="48" left="15" bottom="3" right="3"/>
+                      <maximumSize width="100" height="115"/>
+                      <minimumSize width="100" height="115"/>
+                      <preferredSize width="100" height="115"/>
+                      <text value="StrValue"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="d5d1f" binding="sklPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <focusable value="false"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <opaque value="true"/>
+                  <preferredSize width="400" height="115"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="6db6f" class="javax.swing.JLabel">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="24" style="1"/>
+                      <foreground color="-28339"/>
+                      <horizontalAlignment value="4"/>
+                      <horizontalTextPosition value="0"/>
+                      <labelFor value="e4241"/>
+                      <maximumSize width="200" height="115"/>
+                      <minimumSize width="200" height="115"/>
+                      <preferredSize width="200" height="115"/>
+                      <text value="Skill:"/>
+                    </properties>
+                  </component>
+                  <component id="e4241" class="javax.swing.JTextPane" binding="skillValuTextPane">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <focusable value="false"/>
+                      <font name="Castellar" size="18" style="1"/>
+                      <foreground color="-16711681"/>
+                      <margin top="48" left="15" bottom="3" right="3"/>
+                      <maximumSize width="100" height="115"/>
+                      <minimumSize width="100" height="115"/>
+                      <preferredSize width="100" height="115"/>
+                      <text value="SkillValu"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="51f22" binding="mgkPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <focusable value="false"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <opaque value="true"/>
+                  <preferredSize width="400" height="115"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="56e04" class="javax.swing.JLabel">
+                    <constraints border-constraint="West"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <font name="Castellar" size="24" style="1"/>
+                      <foreground color="-28339"/>
+                      <horizontalAlignment value="4"/>
+                      <horizontalTextPosition value="0"/>
+                      <labelFor value="f620"/>
+                      <maximumSize width="200" height="115"/>
+                      <minimumSize width="200" height="115"/>
+                      <preferredSize width="200" height="115"/>
+                      <text value="Magick:"/>
+                    </properties>
+                  </component>
+                  <component id="f620" class="javax.swing.JTextPane" binding="magkValueTextPane">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <editable value="false"/>
+                      <focusable value="false"/>
+                      <font name="Castellar" size="18" style="1"/>
+                      <foreground color="-16711681"/>
+                      <margin top="48" left="15" bottom="3" right="3"/>
+                      <maximumSize width="100" height="115"/>
+                      <minimumSize width="100" height="115"/>
+                      <preferredSize width="100" height="115"/>
+                      <text value="MagkValue"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="dc5e7" binding="heroClass" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="East"/>
+            <properties>
+              <background color="-16777216"/>
+              <foreground color="-28339"/>
+              <maximumSize width="400" height="500"/>
+              <minimumSize width="400" height="500"/>
+              <preferredSize width="400" height="500"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="a3ea2" class="javax.swing.JRadioButton" binding="warriorRadioButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <font name="Castellar" size="22" style="1"/>
+                  <foreground color="-28339"/>
+                  <hideActionText value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <name value="classSelect"/>
+                  <preferredSize width="400" height="115"/>
+                  <text value="Warrior"/>
+                </properties>
+              </component>
+              <component id="fe7dc" class="javax.swing.JRadioButton" binding="rangerRadioButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <font name="Castellar" size="22" style="1"/>
+                  <foreground color="-28339"/>
+                  <hideActionText value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <name value="classSelect"/>
+                  <preferredSize width="400" height="115"/>
+                  <text value="Ranger"/>
+                </properties>
+              </component>
+              <component id="17fa0" class="javax.swing.JRadioButton" binding="wizardRadioButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <font name="Castellar" size="22" style="1"/>
+                  <foreground color="-28339"/>
+                  <hideActionText value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <name value="classSelect"/>
+                  <preferredSize width="400" height="115"/>
+                  <text value="Wizard"/>
+                </properties>
+              </component>
+              <component id="3ac4e" class="javax.swing.JRadioButton" binding="fighterRadioButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <font name="Castellar" size="22" style="1"/>
+                  <foreground color="-28339"/>
+                  <hideActionText value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <maximumSize width="400" height="115"/>
+                  <minimumSize width="400" height="115"/>
+                  <name value="classSelect"/>
+                  <preferredSize width="400" height="115"/>
+                  <text value="Fighter"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="48cf" binding="nameImg" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-16777216"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="3163b" class="javax.swing.JLabel" binding="heroImg">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-16777216"/>
+                  <doubleBuffered value="true"/>
+                  <focusable value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <inheritsPopupMenu value="true"/>
+                  <maximumSize width="300" height="300"/>
+                  <minimumSize width="300" height="300"/>
+                  <preferredSize width="300" height="300"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <grid id="cf98e" binding="namePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-28339"/>
+                  <maximumSize width="300" height="100"/>
+                  <minimumSize width="300" height="100"/>
+                  <preferredSize width="300" height="100"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="d937c" class="javax.swing.JLabel">
+                    <constraints border-constraint="North"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <focusable value="false"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-28339"/>
+                      <horizontalAlignment value="0"/>
+                      <horizontalTextPosition value="0"/>
+                      <maximumSize width="300" height="50"/>
+                      <minimumSize width="300" height="50"/>
+                      <preferredSize width="300" height="50"/>
+                      <text value="Your Name"/>
+                    </properties>
+                  </component>
+                  <component id="797e2" class="javax.swing.JTextField" binding="nameInput">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-16777216"/>
+                      <caretColor color="-28339"/>
+                      <disabledTextColor color="-28339"/>
+                      <font name="Castellar" size="16" style="1"/>
+                      <foreground color="-16711681"/>
+                      <maximumSize width="300" height="50"/>
+                      <minimumSize width="300" height="50"/>
+                      <preferredSize width="300" height="50"/>
+                      <selectedTextColor color="-28339"/>
+                      <selectionColor color="-28339"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="962ce" binding="blank" layout-manager="GridBagLayout">
+                <constraints border-constraint="South"/>
+                <properties>
+                  <background color="-16777216"/>
+                  <maximumSize width="300" height="80"/>
+                  <minimumSize width="300" height="80"/>
+                  <preferredSize width="300" height="80"/>
+                </properties>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="e5899" binding="starPanel" layout-manager="GridBagLayout">
+        <constraints border-constraint="South"/>
+        <properties>
+          <background color="-16777216"/>
+          <maximumSize width="1100" height="200"/>
+          <minimumSize width="1100" height="200"/>
+          <preferredSize width="1100" height="200"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="41191" class="javax.swing.JButton" binding="startBtn">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-15132304"/>
+              <focusable value="false"/>
+              <font name="Castellar" size="22" style="1"/>
+              <foreground color="-28339"/>
+              <horizontalTextPosition value="0"/>
+              <maximumSize width="550" height="150"/>
+              <minimumSize width="550" height="150"/>
+              <preferredSize width="550" height="150"/>
+              <text value="Climb Tower!"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="classSelection">
+      <member id="fe7dc"/>
+      <member id="17fa0"/>
+      <member id="3ac4e"/>
+      <member id="a3ea2"/>
+    </group>
+  </buttonGroups>
+</form>
